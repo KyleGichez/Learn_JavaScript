@@ -80,6 +80,58 @@ pillars.splice(2,2,'Sawm','Hajj');
 notPillars.splice(2,3);
 console.log(pillars,notPillars);
 
+/**
+ * array.filter();
+ * filters and extracts elements that pass the required conditions
+ */
+const marks = [40,30,79,44,88,96,100];
+const pass = (value) =>{
+   return value >= 50;
+};
+console.log(marks.filter(pass));
+
+const towns = ['Nairobi','Nakuru','Mombasa','Kisumu','Eldoret','Nyeri'];
+const checkCity = (town) =>{
+    return town.charAt(1) === 'a' || town.charAt(0) === 'K';
+};
+console.log(towns.filter(checkCity));
+
+/**
+ * array.reverse();
+ * reverses the original array elements from the last to the first element 
+ */
+const colors = new Array('Red','Blue','Green','Yellow','Black');
+colors.reverse();
+const nums = [1,2,3,4,5,6];
+nums.reverse();
+console.log(colors,nums);
+
+/**
+ * array.reduce();
+ * runs a reducer callback function over all elements in the array
+ * in ascending order and accumulates them into a single value
+ */
+const values = [0,1,2,3,4];
+let total = values.reduce((value,currentValue) => value + currentValue);
+console.log(total);
+
+const newValues = [0,1,2,3,4];
+let initialValue = 10;
+let sum = newValues.reduce((value,currentValue) => value + currentValue, initialValue,);
+console.log(sum);
+
+/**
+ * array.includes();
+ * checks if the array contains the specified element
+ * returns true if the element exists or false if element doesn't exist
+ */
+const codeLanguage = ['JavaScript','Java','Python','Dart'];
+let isJavaScript = codeLanguage.includes('JavaScript');
+console.log(isJavaScript);
+
+const writeCode = ['Java','Python','Golang','javaScript'];
+let isPython = writeCode.includes('Python', 2);
+console.log(isPython);
 
 
 
