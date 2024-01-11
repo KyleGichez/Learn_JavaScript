@@ -133,6 +133,35 @@ const writeCode = ['Java','Python','Golang','javaScript'];
 let isPython = writeCode.includes('Python', 2);
 console.log(isPython);
 
+/**
+ * array.findIndex();
+ * returns the index of the first element in an array 
+ * that satisfies the condition in the provided function
+ * if no condition satisfied it returns -1
+ */
+const allNums = [14,27,3,4,5,7,11,22];
+let num = 2;
+const isPrime = (randomValue) =>{
+    while(num <= Math.sqrt(randomValue)){
+        if(randomValue % num++ < 1){
+            return false;
+        }else{
+            return true;
+        };
+    };
+    return randomValue > 1;
+};
+console.log(allNums,allNums.findIndex(isPrime));
+
+const squares = [225,81,144,121,];
+const findSquare = squares.findIndex(x => x < 100)
+console.log(squares,findSquare);
+
+const smallNums = new Array(1,28,11,1212,123,9);
+let bigNumber = (number) => number > 1000;
+console.log(smallNums,smallNums.findIndex(bigNumber));
+
+
 
 
 
