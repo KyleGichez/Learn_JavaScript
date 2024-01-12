@@ -161,7 +161,37 @@ const smallNums = new Array(1,28,11,1212,123,9);
 let bigNumber = (number) => number > 1000;
 console.log(smallNums,smallNums.findIndex(bigNumber));
 
+/**
+ * array.sort();
+ * arranges the array elements in ascending order
+ */
+const integers = [8,3,12,1,5,110,2];
+let sortIntegers = integers.sort();
+console.log(sortIntegers, sortIntegers[1]);
 
+/**
+ * array.find();
+ * returns the first element in an array
+ * that satisfies the conditions of the given function
+ */
+const bigIntegers = new Array(12,11,75,55,20,225,100);
+let bigInt = bigIntegers.find(intValue => intValue > 50);
+console.log(bigIntegers,bigInt);
 
+/**
+ * array.forEach();
+ * iteiates through each element in an array once
+ * more efficient than a for loop
+ */
+const students = ['Mary','John','Isaac','Omar'];
+students.forEach(checkStudent = (individual) =>{
+    console.log(individual);
+});
 
+const fibonacci = new Array(0,10,15,20,25);
+sum = 0;
+fibonacci.forEach(getTotal = (val) =>{
+    sum += val;
+    console.log(sum);
+});
 
