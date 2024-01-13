@@ -185,7 +185,7 @@ console.log(bigIntegers,bigInt);
  */
 const students = ['Mary','John','Isaac','Omar'];
 students.forEach(checkStudent = (individual) =>{
-    console.log(individual);
+    //console.log(individual);
 });
 
 const fibonacci = new Array(0,10,15,20,25);
@@ -195,3 +195,50 @@ fibonacci.forEach(getTotal = (val) =>{
     console.log(sum);
 });
 
+/**
+ * array.fill();
+ * fills the elements of an array with the specified static values
+ */
+const countries = ['Kenya','Somalia','Ethiopia','Djibouti'];
+let newCountries = ['Kenya','Somalia','Ethiopia','Djibouti'];
+countries.fill('Italy');
+newCountries.fill('Italy',1,3);
+console.log(countries, newCountries);
+
+/**
+ * array.indexOf();
+ * searches the position of an element in an array
+ * it's case sensitive and if no element found returns -1
+ */
+const continents = ['Australia','New Zealand','Africa','New Zealand'];
+let continent = continents.indexOf('New Zealand');
+let continent1 = continents.indexOf('New Zealand',2);
+let continent2 = continents.indexOf('South America');
+console.log(continents,continent,continent1,continent2);
+
+/**
+ * array.lastIndexOf();
+ * searches the last position of an element in an array
+ * it's case sensitive and if no element found returns -1
+ */
+const weather = ['Sunny','Rainy','Cloudy','Rainy','Windy','Calm'];
+let today = weather.lastIndexOf('Rainy');
+let today1 = weather.lastIndexOf('Rainy',2);
+let today2 = weather.lastIndexOf('Stormy');
+console.log(weather,today,today1,today2);
+
+/**
+ * array.map();
+ * calls the speciified function on every element and returns a new array
+ */
+const ages = [20,15,18,40];
+let ageDouble = ages.map(age => age * 2);
+console.log(ageDouble);
+
+/**
+ * array.join();
+ * joins all the elements in an array using separators and returns a new sring
+ */
+const states = ['Arkansas','Ohio','Atlanta','New York'];
+let allStates = states.join(', ');
+console.log(allStates);
